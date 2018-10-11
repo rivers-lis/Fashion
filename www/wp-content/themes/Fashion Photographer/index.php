@@ -37,7 +37,7 @@
             <?php if ($page_index->have_posts()) : while ($page_index->have_posts()) : $page_index->the_post(); ?>
             <!-- post -->
                 <div>
-                    <!--<a href="<?php the_permalink(); ?>"><img src="<?php /*bloginfo('template_url'); */?>/images/mail-news1.jpg" alt="" /></a>-->
+                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a>
                     <h1><a href="<?php the_permalink(); ?>"><?php echo get_post_meta(get_the_ID(), 'title', true); ?></a></h1>
                     <?php the_excerpt(); ?>
                     <p><a href="<?php the_permalink(); ?>" class="read-more">read more</a></p>
@@ -45,7 +45,18 @@
             <?php endwhile; ?>
             <!-- post navigation -->
             <?php else: ?>
-            <!-- no posts found -->
+           <div>
+               <p>Добавьте к страницам/записям произвольное поле "title" с необходимым звголовком для вывода на главную страпницу</p>
+               <p>Второе произвольное поле - "order" - будет использованно для сортировки</p>
+           </div>
+                <div>
+                    <p>Добавьте к страницам/записям произвольное поле "title" с необходимым звголовком для вывода на главную страпницу</p>
+                    <p>Второе произвольное поле - "order" - будет использованно для сортировки</p>
+                </div>
+                <div>
+                    <p>Добавьте к страницам/записям произвольное поле "title" с необходимым звголовком для вывода на главную страпницу</p>
+                    <p>Второе произвольное поле - "order" - будет использованно для сортировки</p>
+                </div>
             <?php endif; ?>
 
 			<!--<div>

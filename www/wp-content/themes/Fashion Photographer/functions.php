@@ -15,5 +15,9 @@ register_sidebar(array(
 	'before_widget' => '',
 	'after_widget' => ''
 ));
+/*
+ * миниатюры
+ * */
+add_theme_support('post-thumbnails');
 
 ?>
